@@ -7,8 +7,7 @@ setup(
 
 
     install_requires=[
-        "pyaml",
-        "pylint"
+        "yaml"
     ],
 
     # package_data={
