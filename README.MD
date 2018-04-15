@@ -1,5 +1,7 @@
 # YamlSub
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+
 - [YamlSub](#yamlsub)
     - [Description](#description)
     - [Requirements](#requirements)
