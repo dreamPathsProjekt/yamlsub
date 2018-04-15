@@ -7,7 +7,8 @@ setup(
 
 
     install_requires=[
-        "pyaml"
+        "pyaml",
+        "pyinstaller"
     ],
 
     # package_data={
