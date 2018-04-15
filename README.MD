@@ -14,6 +14,7 @@
     - [Examples](#examples)
       - [Substitution in `.yml` files](#substitution-in-yml-files)
   - [Notes](#notes)
+  - [Future Releases - Todos](#future-releases---todos)
 
 ## Description
 
@@ -252,3 +253,26 @@ def replace_yaml(field, original_value, replacement_value, filename):
     with open(filename, mode='w') as file:
         yaml.dump(data, file)
 ```
+
+## Future Releases - Todos
+
+- Add functionality to input hidden password values by using `-p, --password` switch.
+- Add functionality to get values to replace, from environment variables.
+- Add ability to search and return `.yml` specific keys and values to stdout.
+- Add functionality to copy blocks from one `.yml` template file and replace as keys to the output file.
+- Add functionality to replace all keys (fields) with `-a, --all` switch.
+- Include replacement to multiple output files.
+- Extend `.ini` implementation to sanitize or escape illegal characters at the target file.
+- Automatically get and replace corresponding values from `.env` files based on translation rules, e.g.
+
+  `.env` file:
+
+  ```Shell
+  ADMIN_USER=test01
+  ```
+
+  resulting `.yml` file
+
+  ```YAML
+    admin-user: test01
+  ```
