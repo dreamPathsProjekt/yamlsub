@@ -106,3 +106,4 @@ ENV/
 # test files
 application.properties
 docker-stack-preprod.yml
+grafana.ini
