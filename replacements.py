@@ -1,4 +1,4 @@
-import yaml, pprint
+import yaml
 from helpers import find_key, get_key, replace_key, replace_property, escape_dquotes, escape_url_encode
 
 def replace_yaml(field, original_value, replacement_value, filename):
