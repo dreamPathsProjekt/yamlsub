@@ -12,7 +12,7 @@ To see your Distro release and Python version:
 lsb_release -a
 
 # Python version
-users@server:~ $ python3 --version
+user@server:~ $ python3 --version
 Python 3.5.2
 ```
 
@@ -77,7 +77,7 @@ Deactivate virtualenv and find executable in `dist/yamlsub` folder:
 
 ```Shell
 (yamlsub) user@server:~/yamlsub (master)$ deactivate
-user@server:~/yamlsub (master)$cd dist/yamlsub/
+user@server:~/yamlsub (master)$ cd dist/yamlsub/
 
 user@server:~/yamlsub/dist/yamlsub (master)$ ./yamlsub -h
 
