@@ -1,4 +1,4 @@
-# YamlSub v:0.1
+# YamlSub
 
 ## Description
 
