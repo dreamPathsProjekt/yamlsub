@@ -1,6 +1,7 @@
 
 def escape_dquotes(input):
-    return "'" + str(input) + "'"
+    if '#' in input or '"' in input or ';' in input or '\\' in input:
+        return "'" + str(input) + "'"
 
 def find_key(key, dictionary):
     for k, v in dictionary.items():
@@ -60,7 +61,7 @@ def replace_property(field, original_value, replacement_value, prop_list, separa
 
         if str(line).split(separator)[0].strip() == field and str(line).split(separator)[1].strip() == original_value:
             # print(str(line).split(separator)[1])
-            line = str(line).split(separator)[0].strip() + separator + escape_dquotes(replacement_value) + '\n'
+            line = '{}{}{}{}'.format(str(line).split(separator)[0].strip(), separator, replacement_value, '\n')
 
         new_prop_list.append(line)
     return new_prop_list

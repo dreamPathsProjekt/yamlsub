@@ -17,7 +17,7 @@ import replacements
 # with open('./docker-stack-preprod.yml', 'w') as file:
 #     yaml.dump(data, file)
 get_env = os.environ['ADMIN_PASS']
-replacements.replace_yaml('image', 'sixeyed/password-web:v2', get_env, './docker-stack-preprod.yml')
+# replacements.replace_yaml('image', 'sixeyed/password-web:v2', get_env, './docker-stack-preprod.yml')
 replacements.replace_application_properties('logging.file', 'testvalue', get_env, './application.properties')
 # !$^%)(\a
 
