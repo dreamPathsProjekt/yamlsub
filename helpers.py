@@ -1,4 +1,7 @@
 
+def escape_dquotes(input):
+    return "'" + str(input) + "'"
+
 def find_key(key, dictionary):
     for k, v in dictionary.items():
         if k == key:
@@ -51,13 +54,13 @@ def replace_key(key, value, replacement, dictionary):
                     replace_key(key, value, replacement, d)
                         # yield result
 
-def replace_property(field, original_value, replacement_value, prop_list):
+def replace_property(field, original_value, replacement_value, prop_list, separator):
     new_prop_list = []
     for line in prop_list:
 
-        if str(line).split('=')[0].strip() == field and str(line).split('=')[1].strip() == original_value:
-            # print(str(line).split('=')[1])
-            line = str(line).split('=')[0].strip() + '=' + replacement_value + '\n'
+        if str(line).split(separator)[0].strip() == field and str(line).split(separator)[1].strip() == original_value:
+            # print(str(line).split(separator)[1])
+            line = str(line).split(separator)[0].strip() + separator + escape_dquotes(replacement_value) + '\n'
 
         new_prop_list.append(line)
     return new_prop_list

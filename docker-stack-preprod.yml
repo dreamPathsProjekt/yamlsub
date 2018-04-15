@@ -18,6 +18,6 @@ services:
         constraints: [node.platform.os == linux, node.role == worker]
       replicas: 6
     environment: {'PasswordApi:Url': 'http://api.sixeyed.com'}
-    image: something
+    image: sixeyed/password-web:v2
     networks: {dmz-net: null}
 version: '3.3'
